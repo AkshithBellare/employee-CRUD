@@ -20,7 +20,7 @@ import { UpdateEmployeeComponent } from './update-employee/update-employee.compo
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

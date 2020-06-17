@@ -1,17 +1,18 @@
-<nav class="navbar navbar-expand-sm bg-primary navbar-dark">
+<nav class="navbar navbar-expand-sm bg-secondary navbar-dark justify-content-between" >
   <!-- Links -->
+  <a href="#"><img src="../assets/employees" alt="" height="40px"></a>
   <ul class="navbar-nav">
     <li class="nav-item">
-        <a routerLink="employees" class="nav-link" routerLinkActive="active">Employee List</a>
+        <a routerLink="employees" class="nav-link" routerLinkActive="active"><strong>EMPLOYEES</strong></a>
     </li>
     <li class="nav-item">
-        <a routerLink="add" class="nav-link" routerLinkActive="active">Add Employee</a>
+        <a routerLink="add" class="nav-link" routerLinkActive="active"><strong>ADD NEW EMPLOYEE</strong></a>
     </li>
   </ul>
 </nav>
 <div class="container">
   <br>
-  <h2 style="text-align: center;">{{title}}</h2>
+  <h1 style="text-align: center; color: black; font-weight: 800;">{{title}}</h1>
   <hr>  
   <div class="card">
     <div class="card-body">

@@ -13,15 +13,15 @@ export class EmployeeDetailsComponent implements OnInit {
   email: string;
   employee: Employee;
 
-  constructor(private route: ActivatedRoute,private router: Router,
+  constructor(private route: ActivatedRoute, private router: Router,
     private employeeService: EmployeeService) { }
 
   ngOnInit() {
-    this.employee = new Employee('Akshith Bellare', 
-    'Senior Manager', 
-    'akshith@gmail.com', 
-    8217618871, 
-    80000, {
+    this.employee = new Employee('Akshith Bellare',
+      'Senior Manager',
+      'akshith@gmail.com',
+      8217618871,
+      80000, {
       street: '3rd a cross, Akshaya Nagar',
       city: 'Bengaluru',
       state: 'Karnataka',
@@ -29,7 +29,7 @@ export class EmployeeDetailsComponent implements OnInit {
     });
 
     this.email = this.route.snapshot.params['email'];
-    
+
     this.employeeService.getEmployee(this.email)
       .subscribe(data => {
         console.log(data)
@@ -37,7 +37,7 @@ export class EmployeeDetailsComponent implements OnInit {
       }, error => console.log(error));
   }
 
-  list(){
+  list() {
     this.router.navigate(['employees']);
   }
 

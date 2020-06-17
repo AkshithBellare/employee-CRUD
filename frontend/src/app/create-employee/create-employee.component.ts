@@ -10,16 +10,16 @@ import { Router } from '@angular/router';
 })
 export class CreateEmployeeComponent implements OnInit {
 
-  employee: Employee = new Employee('Akshith Bellare', 
-                                    'Senior Manager', 
-                                    'akshith@gmail.com', 
-                                    8217618871, 
-                                    80000, {
-                                      street: '3rd a cross, Akshaya Nagar',
-                                      city: 'Bengaluru',
-                                      state: 'Karnataka',
-                                      country: 'India',
-                                    });
+  employee: Employee = new Employee('Akshith Bellare',
+    'Senior Manager',
+    'akshith@gmail.com',
+    8217618871,
+    80000, {
+    street: '3rd a cross, Akshaya Nagar',
+    city: 'Bengaluru',
+    state: 'Karnataka',
+    country: 'India',
+  });
   submitted = false;
 
   constructor(private employeeService: EmployeeService,
@@ -32,11 +32,11 @@ export class CreateEmployeeComponent implements OnInit {
     console.log(this.employee);
     this.employeeService.createEmployee(this.employee)
       .subscribe(data => console.log(data), error => console.log(error));
-    this.employee = new Employee('Akshith Bellare', 
-    'Senior Manager', 
-    'akshith@gmail.com', 
-    8217618871, 
-    80000, {
+    this.employee = new Employee('Akshith Bellare',
+      'Senior Manager',
+      'akshith@gmail.com',
+      8217618871,
+      80000, {
       street: '3rd a cross, Akshaya Nagar',
       city: 'Bengaluru',
       state: 'Karnataka',
@@ -47,7 +47,7 @@ export class CreateEmployeeComponent implements OnInit {
 
   onSubmit() {
     this.submitted = true;
-    this.save();    
+    this.save();
   }
 
   gotoList() {
